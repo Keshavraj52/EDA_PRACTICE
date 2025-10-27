@@ -1,0 +1,1 @@
+select * from (select *, row_number() over (partition by user_id order by transation_date asc)as rnk)
